@@ -1,4 +1,6 @@
 build/*
 releases/*
+toolchains/*
 workspace/m17/cores/output/*
+workspace/m17/cores/src/*
 workspace/hash.txt
