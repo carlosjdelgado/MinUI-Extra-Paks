@@ -1,0 +1,24 @@
+diff --git a/makefile.libretro b/makefile.libretro
+index d426c71..6167596 100755
+--- a/makefile.libretro
++++ b/makefile.libretro
+@@ -366,6 +366,19 @@ PSS_STYLE :=2
+ LDFLAGS += -DLL
+ CFLAGS += -D_CRT_SECURE_NO_DEPRECATE
+ 
++# M17
++else ifeq ($(platform), m17)
++	TARGET := $(TARGET_NAME)_libretro.so
++	CC = $(CROSS_COMPILE)gcc
++	CXX = $(CROSS_COMPILE)g++
++	AR = $(CROSS_COMPILE)ar
++	fpic := -fPIC -DPIC
++   SHARED := -shared -Wl,-no-undefined -Wl,--version-script=$(LIBRETRO_DIR)/link.T
++	CFLAGS += -fomit-frame-pointer -ffast-math
++	CFLAGS += -marm -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7
++	ARCH = arm
++	CPU_ARCH := arm
++
+ # Windows
+ else
+    TARGET := $(TARGET_NAME)_libretro.dll
