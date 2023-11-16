@@ -1,4 +1,4 @@
-CORES = fbalpha2012-neogeo
+CORES = fbalpha2012-neogeo mame2003
 
 ###############################
 
@@ -12,6 +12,9 @@ CORES = fbalpha2012-neogeo
 
 fbalpha2012-neogeo_REPO = https://github.com/libretro/fbalpha2012_neogeo
 fbalpha2012-neogeo_CORE = fbalpha2012_neogeo_libretro.so
+
+mame2003_REPO = https://github.com/libretro/mame2003-libretro
+mame2003_CORE = mame2003_libretro.so
 
 ###############################
 

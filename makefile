@@ -37,6 +37,7 @@ build:
 cores: # TODO: can't assume every platform will have the same stock cores (platform should be responsible for copy too)
 	# extras
 	cp ./workspace/$(PLATFORM)/cores/output/fbalpha2012_neogeo_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/NG.pak
+	cp ./workspace/$(PLATFORM)/cores/output/mame2003_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/MAME.pak
 
 common: build cores
 	
