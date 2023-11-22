@@ -47,7 +47,7 @@ clean:
 setup:
 	# ----------------------------------------------------
 	# make sure we're running in an input device
-	tty -s 
+	# tty -s 
 	
 	# ready fresh build
 	rm -rf ./build
