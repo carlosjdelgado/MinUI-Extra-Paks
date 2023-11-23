@@ -21,7 +21,7 @@ RELEASE_NAME=$(RELEASE_BASE)-$(RELEASE_DOT)
 
 export MAKEFLAGS=--no-print-directory
 
-all: setup $(PLATFORMS) package done
+all: setup $(PLATFORMS) package
 	
 shell:
 	make -f makefile.toolchain PLATFORM=$(PLATFORM)
@@ -62,10 +62,6 @@ setup:
 	# copy readmes to workspace so we can use Linux fmt instead of host's
 	mkdir -p ./workspace/readmes
 	cp ./skeleton/EXTRAS/README.txt ./workspace/readmes/EXTRAS-in.txt
-	
-done:
-	say "done"
-
 
 package:
 	# ----------------------------------------------------
