@@ -38,7 +38,7 @@ cores: # TODO: can't assume every platform will have the same stock cores (platf
 	# extras
 	cp ./workspace/$(PLATFORM)/cores/output/fbalpha2012_neogeo_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/NG.pak
 	cp ./workspace/$(PLATFORM)/cores/output/mame2003_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/MAME.pak
-	cp ./workspace/$(PLATFORM)/cores/output/mednafen_lynx_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/LYNX.pak
+	cp ./workspace/$(PLATFORM)/cores/output/handy_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/LYNX.pak
 
 common: build cores
 	

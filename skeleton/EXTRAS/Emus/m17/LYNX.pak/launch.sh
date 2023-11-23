@@ -1,6 +1,6 @@
 #!/bin/sh
 
-EMU_EXE=mednafen_lynx
+EMU_EXE=handy
 CORES_PATH=$(dirname "$0")
 
 ###############################

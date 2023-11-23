@@ -1,4 +1,4 @@
-CORES = fbalpha2012-neogeo mame2003 mednafen-lynx
+CORES = fbalpha2012-neogeo mame2003 handy
 
 ###############################
 
@@ -16,8 +16,8 @@ fbalpha2012-neogeo_CORE = fbalpha2012_neogeo_libretro.so
 mame2003_REPO = https://github.com/libretro/mame2003-libretro
 mame2003_CORE = mame2003_libretro.so
 
-mednafen-lynx_REPO = https://github.com/libretro/beetle-lynx-libretro
-mednafen-lynx_CORE = mednafen_lynx_libretro.so
+handy_REPO = https://github.com/libretro/libretro-handy
+handy_CORE = handy_libretro.so
 
 ###############################
 
