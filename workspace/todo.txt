@@ -1,4 +1,3 @@
-- test atari lynx emulator
 - add atari 2600
 - add atari 5200
 - add atari 7800
