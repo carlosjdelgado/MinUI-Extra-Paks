@@ -10,5 +10,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: make all
+    - name: 'Make'
       run: make all
+
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: release
+        path: releases
+        retention-days: 30
