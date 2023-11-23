@@ -1,0 +1,14 @@
+- test atari lynx emulator
+- add atari 2600
+- add atari 5200
+- add atari 7800
+- add Game&Watch
+- add OpenBor (it is possible?)
+- DosBox?
+- EasyRPG?
+- add ZX spectrum
+- add Amstrad CPC
+- add WonderSwan
+- testing
+- readme
+- release
