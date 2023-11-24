@@ -1,0 +1,24 @@
+diff --git a/Makefile b/Makefile
+index 18885d8..5bb9d54 100644
+--- a/Makefile
++++ b/Makefile
+@@ -598,6 +598,19 @@ else ifneq (,$(findstring windows_msvc2017,$(platform)))
+ 	PSS_STYLE :=2
+ 	LDFLAGS += -DLL
+ 
++# M17
++else ifeq ($(platform), m17)
++	TARGET := $(TARGET_NAME)_libretro.so
++	CC = $(CROSS_COMPILE)gcc
++	CXX = $(CROSS_COMPILE)g++	
++	AR = $(CROSS_COMPILE)ar
++	fpic := -fPIC -DPIC
++	LDFLAGS += -shared -Wl,--version-script=link.T -Wl,-no-undefined
++	CFLAGS += -marm -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7
++	ARCH = arm
++	CPU_ARCH := arm
++	CXXFLAGS += -fno-rtti -fexceptions
++
+ # Windows
+ else
+    TARGET := $(TARGET_NAME)_libretro.dll

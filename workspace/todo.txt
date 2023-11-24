@@ -1,10 +1,9 @@
-- add atari 2600
-- add atari 5200
-- add atari 7800
 - add Game&Watch
+- arduboy? (arduous core)
 - add OpenBor (it is possible?)
 - DosBox?
 - EasyRPG?
+- review Atari 5200 controls
 - add ZX spectrum
 - add Amstrad CPC
 - add WonderSwan

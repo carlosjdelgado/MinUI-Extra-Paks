@@ -1,4 +1,4 @@
-CORES = fbalpha2012-neogeo mame2003 handy
+CORES = fbalpha2012-neogeo mame2003 handy stella2014 a5200 prosystem
 
 ###############################
 
@@ -18,6 +18,15 @@ mame2003_CORE = mame2003_libretro.so
 
 handy_REPO = https://github.com/libretro/libretro-handy
 handy_CORE = handy_libretro.so
+
+stella2014_REPO = https://github.com/libretro/stella2014-libretro
+stella2014_CORE = stella2014_libretro.so
+
+a5200_REPO = https://github.com/libretro/a5200
+a5200_CORE = a5200_libretro.so
+
+prosystem_REPO = https://github.com/libretro/prosystem-libretro
+prosystem_CORE = prosystem_libretro.so
 
 ###############################
 
