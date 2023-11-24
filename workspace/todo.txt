@@ -1,12 +1,11 @@
-- add Game&Watch
-- arduboy? (arduous core)
-- add OpenBor (it is possible?)
-- DosBox?
-- EasyRPG?
-- review Atari 5200 controls
-- add ZX spectrum
 - add Amstrad CPC
 - add WonderSwan
+- review Atari 5200 controls
 - testing
 - readme
 - release
+
+== next version ==
+- arduboy? (arduous core)
+- DosBox?
+- EasyRPG?

@@ -1,4 +1,4 @@
-CORES = fbalpha2012-neogeo mame2003 handy stella2014 a5200 prosystem
+CORES = fbalpha2012-neogeo mame2003 handy stella2014 a5200 prosystem gw fuse
 
 ###############################
 
@@ -27,6 +27,12 @@ a5200_CORE = a5200_libretro.so
 
 prosystem_REPO = https://github.com/libretro/prosystem-libretro
 prosystem_CORE = prosystem_libretro.so
+
+gw_REPO = https://github.com/libretro/gw-libretro
+gw_CORE = gw_libretro.so
+
+fuse_REPO = https://github.com/libretro/fuse-libretro
+fuse_CORE = fuse_libretro.so
 
 ###############################
 

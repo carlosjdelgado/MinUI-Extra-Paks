@@ -1,0 +1,24 @@
+diff --git a/Makefile.libretro b/Makefile.libretro
+index a1b534b..da3d48b 100644
+--- a/Makefile.libretro
++++ b/Makefile.libretro
+@@ -465,6 +465,19 @@ else ifeq ($(platform), gcw0)
+ 	CFLAGS += -fomit-frame-pointer -march=mips32 -mtune=mips32r2 -mhard-float
+ 	CXXFLAGS += -fomit-frame-pointer -march=mips32 -mtune=mips32r2 -mhard-float	
+ 
++# M17
++else ifeq ($(platform), m17)
++	TARGET := $(TARGET_NAME)_libretro.so
++	CC = $(CROSS_COMPILE)gcc
++	CXX = $(CROSS_COMPILE)g++	
++	AR = $(CROSS_COMPILE)ar
++	fpic := -fPIC -DPIC
++	SHARED := -shared -Wl,-no-undefined -Wl,--version-script=$(BUILD_DIR)/link.T
++	CFLAGS += -marm -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7
++	ARCH = arm
++	CPU_ARCH := arm
++	CXXFLAGS += -fno-rtti -fexceptions
++
+ # Windows
+ else
+ 	TARGET := $(TARGET_NAME)_libretro.dll
