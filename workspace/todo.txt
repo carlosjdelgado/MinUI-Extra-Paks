@@ -1,6 +1,6 @@
-- add Amstrad CPC
-- add WonderSwan
 - review Atari 5200 controls
+- review Amstrad CPC controls
+- review ZX Spectrum controls
 - testing
 - readme
 - release

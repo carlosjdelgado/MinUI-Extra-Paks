@@ -1,4 +1,4 @@
-CORES = fbalpha2012-neogeo mame2003 handy stella2014 a5200 prosystem gw fuse
+CORES = fbalpha2012-neogeo mame2003 handy stella2014 a5200 prosystem gw fuse crocods
 
 ###############################
 
@@ -33,6 +33,9 @@ gw_CORE = gw_libretro.so
 
 fuse_REPO = https://github.com/libretro/fuse-libretro
 fuse_CORE = fuse_libretro.so
+
+crocods_REPO = https://github.com/libretro/libretro-crocods
+crocods_CORE = crocods_libretro.so
 
 ###############################
 

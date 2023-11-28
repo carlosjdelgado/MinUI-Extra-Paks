@@ -44,6 +44,7 @@ cores: # TODO: can't assume every platform will have the same stock cores (platf
 	cp ./workspace/$(PLATFORM)/cores/output/prosystem_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/A7800.pak
 	cp ./workspace/$(PLATFORM)/cores/output/gw_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/GW.pak
 	cp ./workspace/$(PLATFORM)/cores/output/fuse_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/ZXS.pak
+	cp ./workspace/$(PLATFORM)/cores/output/crocods_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/ACPC.pak
 
 common: build cores
 	

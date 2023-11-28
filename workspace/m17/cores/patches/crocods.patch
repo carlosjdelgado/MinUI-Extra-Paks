@@ -1,0 +1,24 @@
+diff --git a/Makefile b/Makefile
+index 3cfbbcc..09d4604 100644
+--- a/Makefile
++++ b/Makefile
+@@ -263,6 +263,19 @@ else ifeq ($(platform), wiiu)
+ 	PLATFORM_DEFINES += -DGEKKO -DWIIU -DHW_RVL -mrvl -mcpu=750 -meabi -mhard-float
+ 	STATIC_LINKING = 1
+ 
++# M17
++else ifeq ($(platform), m17)
++	TARGET := $(TARGET_NAME)_libretro.so
++	CC = $(CROSS_COMPILE)gcc
++	CXX = $(CROSS_COMPILE)g++	
++	AR = $(CROSS_COMPILE)ar
++	fpic := -fPIC -DPIC
++   SHARED := -shared -Wl,--no-undefined
++	CFLAGS += -marm -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7
++	ARCH = arm
++	CPU_ARCH := arm
++	CXXFLAGS += -fno-rtti -fexceptions
++
+ else
+ 	EXT?=dll
+    TARGET := $(TARGET_NAME)_libretro.$(EXT)
