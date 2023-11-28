@@ -13,7 +13,7 @@ BUILD_HASH:=$(shell git rev-parse --short HEAD)
 RELEASE_TIME:=$(shell date +%Y%m%d)
 RELEASE_BETA=b
 RELEASE_BASE=MinUI-$(RELEASE_TIME)$(RELEASE_BETA)
-RELEASE_DOT:=$(shell find -E ./releases/. -regex ".*/${RELEASE_BASE}-[0-9]+-base\.zip" | wc -l | sed 's/ //g')
+RELEASE_DOT:=$(shell find ./releases/. -regex ".*/${RELEASE_BASE}-[0-9]+-extras\.zip" | wc -l | sed 's/ //g')
 RELEASE_NAME=$(RELEASE_BASE)-$(RELEASE_DOT)
 
 ###########################################################
@@ -53,9 +53,6 @@ clean:
 
 setup:
 	# ----------------------------------------------------
-	# make sure we're running in an input device
-	# tty -s 
-	
 	# ready fresh build
 	rm -rf ./build
 	mkdir -p ./releases
@@ -65,20 +62,12 @@ setup:
 	cd ./build && find . -type f -name '.keep' -delete
 	cd ./build && find . -type f -name '*.meta' -delete
 	echo $(BUILD_HASH) > ./workspace/hash.txt
-	
-	# copy readmes to workspace so we can use Linux fmt instead of host's
-	mkdir -p ./workspace/readmes
-	cp ./skeleton/EXTRAS/README.txt ./workspace/readmes/EXTRAS-in.txt
 
 package:
 	# ----------------------------------------------------
 	# zip up build
-		
-	# move formatted readmes from workspace to build
-	cp ./workspace/readmes/EXTRAS-out.txt ./build/EXTRAS/README.txt
-	rm -rf ./workspace/readmes
 
-	cd ./build/EXTRAS && zip -r ../../releases/$(RELEASE_NAME)-extras.zip Bios Emus Roms Saves Tools README.txt
+	cd ./build/EXTRAS && zip -r ../../releases/$(RELEASE_NAME)-extras.zip Bios Emus Roms Saves
 	echo "$(RELEASE_NAME)" > ./build/latest.txt
 	
 
