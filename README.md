@@ -1,5 +1,5 @@
 # MinUI-Extra-Paks
-Set of extra paks for MinUI (https://github.com/shauninman/MinUI)
+Set of unofficial extra paks for MinUI (https://github.com/shauninman/MinUI)
 
 MinUI is a focused, custom launcher and libretro frontend for the RGB30, Trimui Smart (and Pro), Miyoo Mini (and Plus), M17, and Anbernic RG35XX, created by @shauninman
 
