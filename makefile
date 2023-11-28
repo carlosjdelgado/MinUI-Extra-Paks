@@ -34,17 +34,8 @@ build:
 	make build -f makefile.toolchain PLATFORM=$(PLATFORM)
 	# ----------------------------------------------------
 
-cores: # TODO: can't assume every platform will have the same stock cores (platform should be responsible for copy too)
-	# extras
-	cp ./workspace/$(PLATFORM)/cores/output/fbalpha2012_neogeo_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/NG.pak
-	cp ./workspace/$(PLATFORM)/cores/output/mame2003_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/MAME.pak
-	cp ./workspace/$(PLATFORM)/cores/output/handy_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/LYNX.pak
-	cp ./workspace/$(PLATFORM)/cores/output/stella2014_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/A2600.pak
-	cp ./workspace/$(PLATFORM)/cores/output/a5200_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/A5200.pak
-	cp ./workspace/$(PLATFORM)/cores/output/prosystem_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/A7800.pak
-	cp ./workspace/$(PLATFORM)/cores/output/gw_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/GW.pak
-	cp ./workspace/$(PLATFORM)/cores/output/fuse_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/ZXS.pak
-	cp ./workspace/$(PLATFORM)/cores/output/crocods_libretro.so ./build/EXTRAS/Emus/$(PLATFORM)/ACPC.pak
+cores:
+	make -C ./workspace/$(PLATFORM)
 
 common: build cores
 	

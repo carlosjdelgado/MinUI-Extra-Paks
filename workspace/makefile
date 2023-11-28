@@ -16,7 +16,6 @@ endif
 
 all:
 	cd ./$(PLATFORM)/cores && make
-	cd ./$(PLATFORM) && make
 
 clean:
 	cd ./$(PLATFORM) && make clean
